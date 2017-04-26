@@ -1,0 +1,24 @@
+1.What is meant by FlumeNG ?
+      Flume is a distributed, reliable, and available service for efficiently collecting, aggregating, and moving large amounts of log data.
+      At a high-level, Flume NG uses a single-hop message delivery guarantee semantics to provide end-to-end reliability for the system
+      
+2.Can Flume provides 100 % reliability to the data flow?
+      Yes,it provides end to end reliability of the flow. 
+      Flume uses a transactional approach in data flow.The channels contain transactional repositories where source and the sink are encapsulated.
+      These channels are responsible for 100% reliablity to data flow.
+      
+3.Can Flume can distributes data to multiple destinations?
+      Yes,it can distribute data to multiple destinations.The Event flows from one source to multiple channels and multiple destinations.
+      It is achieved by defining a flow multiplexer.
+      
+4.Explain about the different channel types in Flume. And which channel type is faster?
+      *MEMORY Channel – Events are read from the source into memory and passed to the sink.
+ 	    *JDBC Channel – JDBC Channel stores the events in an embedded Derby database.
+     	*FILE Channel –File Channel writes the contents to a file on the file system after reading the event from a source. 
+       The file is deleted only after the contents are successfully delivered to the sink.
+      
+      MEMORY Channel is the fastest channel among the three however has the risk of data loss. 
+      The channel that you choose completely depends on the nature of the big data application and the value of each event.
+
+      
+      
